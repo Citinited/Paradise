@@ -39,6 +39,7 @@
 	var/check_anomalies = 1	//checks if it can shoot at unidentified lifeforms (ie xenos)
 	var/check_synth	 = 0 	//if active, will shoot at anything not an AI or cyborg
 	var/ailock = 0 			// AI cannot use this
+	var/manual_targetting	//if active, the AI can target this turret manually
 
 	var/attacked = 0		//if set to 1, the turret gets pissed off and shoots at people nearby (unless they have sec access!)
 
@@ -519,6 +520,17 @@ var/list/turret_icons
 	if(spark_system)
 		spark_system.start()	//creates some sparks because they look cool
 	update_icon()
+
+/obj/machinery/porta_turret/proc/AimTurret()
+	//If manual_targetting is on
+	//For each malfunctioning AI, check if their cursor is in the area and they selected to aim manually
+	//If yes, return the thing they're aiming at
+	//Otherwise don't
+	if(manual_targetting)
+		for(var/mob/living/silicon/ai/A in living_mob_list)
+			if(!(A.can_control_turrets))
+				return
+			TURRET_PRIORITY_TARGET
 
 /obj/machinery/porta_turret/process()
 	//the main machinery process

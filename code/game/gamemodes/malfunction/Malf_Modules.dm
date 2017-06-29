@@ -139,6 +139,27 @@
 			turret.eshot_sound = 'sound/weapons/lasercannonfire.ogg'
 	to_chat(src, "<span class='notice'>Turrets upgraded.</span>")
 
+/datum/AI_Module/large/manual_turret_control
+	module_name = "Manual Turret Targetting"
+	mod_pick_name = "targetting"
+	description = "Gives the AI manual control of its turrets, allowing it to target enemies itself. This effect is permanent."
+	cost = 30
+	one_time = 1
+
+	power_type = /mob/living/silicon/ai/proc/manual_turret_control
+
+/mob/living/silicon/ai/proc/manual_turret_control()
+	set category = "Malfunction"
+	set name = "Override turret targetting"
+	if(stat)
+		return
+	verbs -= /mob/living/silicon/ai/proc/manual_turret_control
+	for(var/obj/machinery/porta_turret/turret in machines)
+		var/turf/T = get_turf(turret)
+		if(is_station_level(T.z))
+			turret.manual_targetting = TRUE
+	can_control_turrets = TRUE
+	to_chat(src, "<span class = 'notice'>Turret targetting module overridden.</span>")
 
 /datum/AI_Module/large/lockdown
 	module_name = "Hostile Station Lockdown"
