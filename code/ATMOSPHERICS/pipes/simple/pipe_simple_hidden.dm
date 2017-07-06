@@ -4,7 +4,7 @@
 	alpha = 128		//set for the benefit of mapping - this is reset to opaque when the pipe is spawned in game
 
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers
-	name = "Scrubbers pipe"
+	name = "scrubbers pipe"
 	desc = "A one meter section of scrubbers pipe"
 	icon_state = "intact-scrubbers"
 	connect_types = list(3)
@@ -13,7 +13,7 @@
 	color = PIPE_COLOR_RED
 
 /obj/machinery/atmospherics/pipe/simple/hidden/supply
-	name = "Air supply pipe"
+	name = "air supply pipe"
 	desc = "A one meter section of supply pipe"
 	icon_state = "intact-supply"
 	connect_types = list(2)

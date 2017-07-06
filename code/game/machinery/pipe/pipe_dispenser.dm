@@ -1,5 +1,5 @@
 /obj/machinery/pipedispenser
-	name = "Pipe Dispenser"
+	name = "pipe dispenser"
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "pipe_d"
 	density = 1
@@ -10,12 +10,12 @@
 /obj/machinery/pipedispenser/attack_hand(mob/user)
 	if(..())
 		return 1
-		
+
 	interact(user)
-	
+
 /obj/machinery/pipedispenser/attack_ghost(mob/user)
 	interact(user)
-			
+
 /obj/machinery/pipedispenser/interact(mob/user)
 	var/dat = {"
 <b>Regular pipes:</b><BR>
@@ -141,7 +141,7 @@
 
 
 /obj/machinery/pipedispenser/disposal
-	name = "Disposal Pipe Dispenser"
+	name = "disposal pipe dispenser"
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "pipe_d"
 	density = 1
@@ -163,12 +163,12 @@
 /obj/machinery/pipedispenser/disposal/attack_hand(mob/user)
 	if(..())
 		return
-		
+
 	interact(user)
-	
+
 /obj/machinery/pipedispenser/disposal/attack_ghost(mob/user)
 	interact(user)
-	
+
 /obj/machinery/pipedispenser/disposal/interact(mob/user)
 	var/dat = {"<b>Disposal Pipes</b><br><br>
 <A href='?src=[UID()];dmake=0'>Pipe</A><BR>

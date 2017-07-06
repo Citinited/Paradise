@@ -260,7 +260,7 @@
 	new /obj/item/clothing/shoes/black(src)
 
 /obj/structure/closet/wardrobe/pjs
-	name = "Pajama wardrobe"
+	name = "pajama wardrobe"
 	icon_state = "white"
 	icon_closed = "white"
 

@@ -31,7 +31,7 @@
 	return ..()
 
 /obj/item/clothing/glasses/meson
-	name = "Optical Meson Scanner"
+	name = "optical meson scanner"
 	desc = "Used for seeing walls, floors, and stuff through anything."
 	icon_state = "meson"
 	item_state = "glasses"
@@ -47,8 +47,8 @@
 		)
 
 /obj/item/clothing/glasses/meson/night
-	name = "Night Vision Optical Meson Scanner"
-	desc = "An Optical Meson Scanner fitted with an amplified visible light spectrum overlay, providing greater visual clarity in darkness."
+	name = "night-vision optical meson scanner"
+	desc = "An optical meson scanner fitted with an amplified visible light spectrum overlay, providing greater visual clarity in darkness."
 	icon_state = "nvgmeson"
 	item_state = "glasses"
 	origin_tech = "magnets=4;engineering=5;plasmatech=4"
@@ -71,7 +71,7 @@
 	sharp = 1
 
 /obj/item/clothing/glasses/meson/cyber
-	name = "Eye Replacement Implant"
+	name = "eye replacement implant"
 	desc = "An implanted replacement for a left eye with meson vision capabilities."
 	icon_state = "cybereye-green"
 	item_state = "eyepatch"
@@ -99,7 +99,7 @@
 		return 1
 
 /obj/item/clothing/glasses/science/night
-	name = "Night Vision Science Goggle"
+	name = "night-vision science goggles"
 	desc = "Now you can science in darkness."
 	icon_state = "nvpurple"
 	item_state = "glasses"
@@ -107,7 +107,7 @@
 	invis_view = SEE_INVISIBLE_MINIMUM //don't render darkness while wearing these
 
 /obj/item/clothing/glasses/janitor
-	name = "Janitorial Goggles"
+	name = "janitorial goggles"
 	desc = "These'll keep the soap out of your eyes."
 	icon_state = "purple"
 	item_state = "glasses"
@@ -117,7 +117,7 @@
 		)
 
 /obj/item/clothing/glasses/night
-	name = "Night Vision Goggles"
+	name = "night-vision goggles"
 	desc = "You can totally see in the dark now!"
 	icon_state = "night"
 	item_state = "glasses"
@@ -156,7 +156,7 @@
 		)
 
 /obj/item/clothing/glasses/material
-	name = "Optical Material Scanner"
+	name = "optical material scanner"
 	desc = "Very confusing glasses."
 	icon_state = "material"
 	item_state = "glasses"
@@ -170,7 +170,7 @@
 		)
 
 /obj/item/clothing/glasses/material/cyber
-	name = "Eye Replacement Implant"
+	name = "eye replacement implant"
 	desc = "An implanted replacement for a left eye with material vision capabilities."
 	icon_state = "cybereye-blue"
 	item_state = "eyepatch"
@@ -191,7 +191,7 @@
 
 /obj/item/clothing/glasses/regular/hipster
 	name = "prescription glasses"
-	desc = "Made by Uncool. Co."
+	desc = "Made by Uncool Co."
 	icon_state = "hipster_glasses"
 	item_state = "hipster_glasses"
 
@@ -207,7 +207,7 @@
 		)
 
 /obj/item/clothing/glasses/gglasses
-	name = "Green Glasses"
+	name = "green glasses"
 	desc = "Forest green glasses, like the kind you'd wear when hatching a nasty scheme."
 	icon_state = "gglasses"
 	item_state = "gglasses"
@@ -259,7 +259,7 @@
 
 /obj/item/clothing/glasses/sunglasses/yeah
 	name = "agreeable glasses"
-	desc = "H.C Limited edition."
+	desc = "H.C. Limited edition."
 	var/punused = null
 	actions_types = list(/datum/action/item_action/YEEEAAAAAHHHHHHHHHHHHH)
 
@@ -308,7 +308,7 @@
 
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
-	desc = "Protects the eyes from welders, approved by the mad scientist association."
+	desc = "Protects the eyes from welders, approved by the Mad Scientist Association."
 	icon_state = "welding-g"
 	item_state = "welding-g"
 	actions_types = list(/datum/action/item_action/toggle)
@@ -351,7 +351,7 @@
 
 /obj/item/clothing/glasses/welding/superior
 	name = "superior welding goggles"
-	desc = "Welding goggles made from more expensive materials, strangely smells like potatoes."
+	desc = "Welding goggles made from more expensive materials; strangely smells like potatoes."
 	icon_state = "rwelding-g"
 	item_state = "rwelding-g"
 	flash_protect = 2
@@ -376,7 +376,7 @@
 	item_state = "bigsunglasses"
 
 /obj/item/clothing/glasses/thermal
-	name = "Optical Thermal Scanner"
+	name = "optical thermal scanner"
 	desc = "Thermals in the shape of glasses."
 	icon_state = "thermal"
 	item_state = "glasses"
@@ -403,32 +403,32 @@
 		..()
 
 /obj/item/clothing/glasses/thermal/syndi	//These are now a traitor item, concealed as mesons.	-Pete
-	name = "Optical Meson Scanner"
+	name = "optical meson scanner"
 	desc = "Used for seeing walls, floors, and stuff through anything."
 	icon_state = "meson"
 	origin_tech = "magnets=3;syndicate=4"
 	prescription_upgradable = 1
 
 /obj/item/clothing/glasses/thermal/monocle
-	name = "Thermoncle"
+	name = "thermoncle"
 	desc = "A monocle thermal."
 	icon_state = "thermoncle"
 	flags_cover = null //doesn't protect eyes because it's a monocle, duh
 
 /obj/item/clothing/glasses/thermal/eyepatch
-	name = "Optical Thermal Eyepatch"
+	name = "optical thermal eyepatch"
 	desc = "An eyepatch with built-in thermal optics"
 	icon_state = "eyepatch"
 	item_state = "eyepatch"
 
 /obj/item/clothing/glasses/thermal/jensen
-	name = "Optical Thermal Implants"
+	name = "optical thermal implants"
 	desc = "A set of implantable lenses designed to augment your vision"
 	icon_state = "thermalimplants"
 	item_state = "syringe_kit"
 
 /obj/item/clothing/glasses/thermal/cyber
-	name = "Eye Replacement Implant"
+	name = "eye replacement implant"
 	desc = "An implanted replacement for a left eye with thermal vision capabilities."
 	icon_state = "cybereye-red"
 	item_state = "eyepatch"
@@ -445,27 +445,27 @@
 				icon_state = "sun"
 				item_state = "sunglasses"
 			if("Medical HUD")
-				name = "Health Scanner HUD"
+				name = "health scanner HUD"
 				desc = "A heads-up display that scans the humans in view and provides accurate data about their health status."
 				icon_state = "healthhud"
 				item_state = "healthhud"
 			if("Mesons")
-				name = "Optical Meson Scanner"
+				name = "optical meson scanner"
 				desc = "Used by engineering and mining staff to see basic structural and terrain layouts through walls, regardless of lighting condition."
 				icon_state = "meson"
 				item_state = "meson"
 			if("Science Goggles")
-				name = "Science Goggles"
+				name = "science goggles"
 				desc = "A pair of snazzy goggles used to protect against chemical spills."
 				icon_state = "purple"
 				item_state = "glasses"
 			if("Glasses")
-				name = "Prescription Glasses"
-				desc = "Made by Nerd. Co."
+				name = "prescription glasses"
+				desc = "Made by Nerd Co."
 				icon_state = "glasses"
 				item_state = "glasses"
 			if("Security Sunglasses")
-				name = "HUDSunglasses"
+				name = "HUDsunglasses"
 				desc = "Sunglasses with a HUD."
 				icon_state = "sunhud"
 				item_state = "sunglasses"

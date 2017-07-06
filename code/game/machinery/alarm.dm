@@ -223,7 +223,7 @@
 	alarm_area = get_area(src)
 	area_uid = alarm_area.uid
 	if(name == "alarm")
-		name = "[alarm_area.name] Air Alarm"
+		name = "[alarm_area.name] air alarm"
 	apply_preset(1) // Don't cycle.
 	air_alarm_repository.update_cache(src)
 
@@ -991,7 +991,7 @@
 				else
 					if(allowed(usr) && !wires.IsIndexCut(AALARM_WIRE_IDSCAN))
 						locked = !locked
-						to_chat(user, "<span class='notice'>You [ locked ? "lock" : "unlock"] the Air Alarm interface.</span>")
+						to_chat(user, "<span class='notice'>You [ locked ? "lock" : "unlock"] the air alarm interface.</span>")
 						updateUsrDialog()
 					else
 						to_chat(user, "<span class='warning'>Access denied.</span>")

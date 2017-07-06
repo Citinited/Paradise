@@ -48,8 +48,8 @@
 	see_invisible = SEE_INVISIBLE_MINIMUM
 
 /obj/item/organ/internal/cyberimp/eyes/thermals
-	name = "Thermals implant"
-	desc = "These cybernetic eye implants will give you Thermal vision. Vertical slit pupil included."
+	name = "thermals implant"
+	desc = "These cybernetic eye implants will give you thermal vision. Vertical slit pupil included."
 	eye_colour = list(255, 204, 0)
 	implant_color = "#FFCC00"
 	vision_flags = SEE_MOBS
@@ -79,7 +79,7 @@
 		H.remove_hud_from(M)
 
 /obj/item/organ/internal/cyberimp/eyes/hud/medical
-	name = "Medical HUD implant"
+	name = "medical HUD implant"
 	desc = "These cybernetic eye implants will display a medical HUD over everything you see."
 	eye_colour = list(0,0,208)
 	implant_color = "#00FFFF"
@@ -88,7 +88,7 @@
 	HUD_type = DATA_HUD_MEDICAL_ADVANCED
 
 /obj/item/organ/internal/cyberimp/eyes/hud/security
-	name = "Security HUD implant"
+	name = "security HUD implant"
 	desc = "These cybernetic eye implants will display a security HUD over everything you see."
 	eye_colour = list(208,0,0)
 	implant_color = "#CC0000"
