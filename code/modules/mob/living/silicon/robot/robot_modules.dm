@@ -122,7 +122,6 @@
 /obj/item/weapon/robot_module/medical
 	name = "medical robot module"
 	module_type = "Medical"
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
 	stacktypes = list(
 		/obj/item/stack/medical/bruise_pack/advanced = 5,
 		/obj/item/stack/medical/ointment/advanced = 5,
@@ -216,7 +215,6 @@
 /obj/item/weapon/robot_module/security
 	name = "security robot module"
 	module_type = "Security"
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
 
 /obj/item/weapon/robot_module/security/New()
 	..()

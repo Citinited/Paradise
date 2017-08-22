@@ -788,8 +788,6 @@
 	lefthand_file = 'icons/goonstation/mob/inhands/clothing_lefthand.dmi'
 	righthand_file = 'icons/goonstation/mob/inhands/clothing_righthand.dmi'
 	flags = NODROP
-	has_sensor = 0 // HUNKE
-
 
 /obj/item/clothing/under/victdress
 	name = "black victorian dress"

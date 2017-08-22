@@ -977,8 +977,6 @@
 	icon_state = "jane_sid_suit"
 	item_state = "jane_sid_suit"
 	item_color = "jane_sid_suit"
-	has_sensor = 2
-	sensor_mode = 3
 
 /obj/item/clothing/under/fluff/jane_sidsuit/verb/toggle_zipper()
 	set name = "Toggle Jumpsuit Zipper"

@@ -311,32 +311,6 @@
 		else
 			to_chat(user, "No operatives detected within scanning range.")
 
-/obj/item/weapon/pinpointer/crew
-	name = "crew pinpointer"
-	desc = "A handheld tracking device that points to crew suit sensors."
-	shows_nuke_timer = FALSE
-	icon_state = "pinoff_crew"
-	icon_off = "pinoff_crew"
-	icon_null = "pinonnull_crew"
-	icon_direct = "pinondirect_crew"
-	icon_close = "pinonclose_crew"
-	icon_medium = "pinonmedium_crew"
-	icon_far = "pinonfar_crew"
-
-/obj/item/weapon/pinpointer/crew/proc/trackable(mob/living/carbon/human/H)
-	var/turf/here = get_turf(src)
-	if(istype(H.w_uniform, /obj/item/clothing/under))
-		var/obj/item/clothing/under/U = H.w_uniform
-
-		// Suit sensors must be on maximum.
-		if(!U.has_sensor || U.sensor_mode < 3)
-			return FALSE
-
-		var/turf/there = get_turf(U)
-		return there && there.z == here.z
-
-	return FALSE
-
 /obj/item/weapon/pinpointer/crew/attack_self(mob/living/user)
 	if(active)
 		active = FALSE
