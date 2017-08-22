@@ -73,14 +73,8 @@
 	flags_size = ONESIZEFITSALL
 
 /obj/item/clothing/under/color/orange/prison
-	name = "orange jumpsuit"
-	desc = "It's standardised Nanotrasen prisoner-wear. Its suit sensors are stuck in the \"Fully On\" position."
-	icon_state = "orange"
-	item_state = "o_suit"
-	item_color = "orange"
-	has_sensor = 2
-	sensor_mode = 3
-	flags_size = ONESIZEFITSALL
+	name = "prisoner's jumpsuit"
+	desc = "It's standardised Nanotrasen prisoner-wear."
 
 /obj/item/clothing/under/color/pink
 	name = "pink jumpsuit"

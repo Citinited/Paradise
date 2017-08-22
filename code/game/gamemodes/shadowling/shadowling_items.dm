@@ -6,7 +6,6 @@
 	icon_state = "golem"
 	item_color = "golem"
 	flags = ABSTRACT | NODROP
-	has_sensor = 0
 	displays_id = 0
 	unacidable = 1
 

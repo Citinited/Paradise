@@ -129,7 +129,6 @@
 		/obj/item/clothing/gloves/color/latex,
         /obj/item/weapon/reagent_containers/hypospray/autoinjector,
         /obj/item/device/rad_laser,
-		/obj/item/device/sensor_device,
 		/obj/item/weapon/wrench/medical,
 	)
 

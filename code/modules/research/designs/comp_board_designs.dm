@@ -82,16 +82,6 @@
 	build_path = /obj/item/weapon/circuitboard/communications
 	category = list("Computer Boards")
 
-/datum/design/crewconsole
-	name = "Console Board (Crew Monitoring Computer)"
-	desc = "Allows for the construction of circuit boards used to build a Crew monitoring computer."
-	id = "crewconsole"
-	req_tech = list("programming" = 3, "magnets" = 2, "biotech" = 2)
-	build_type = IMPRINTER
-	materials = list(MAT_GLASS = 1000, "sacid" = 20)
-	build_path = /obj/item/weapon/circuitboard/crew
-	category = list("Computer Boards")
-
 /datum/design/borgupload
 	name = "Console Board (Cyborg Upload)"
 	desc = "Allows for the construction of circuit boards used to build a Cyborg Upload Console."

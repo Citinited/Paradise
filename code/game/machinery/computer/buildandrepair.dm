@@ -218,10 +218,6 @@
 /obj/item/weapon/circuitboard/rdservercontrol
 	name = "Circuit Board (RD Server Control)"
 	build_path = /obj/machinery/computer/rdservercontrol
-/obj/item/weapon/circuitboard/crew
-	name = "Circuit board (Crew Monitoring Computer)"
-	build_path = /obj/machinery/computer/crew
-	origin_tech = "programming=2;biotech=2"
 /obj/item/weapon/circuitboard/mech_bay_power_console
 	name = "Circuit board (Mech Bay Power Control Console)"
 	build_path = /obj/machinery/computer/mech_bay_power_console

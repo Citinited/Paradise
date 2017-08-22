@@ -71,17 +71,6 @@
 	build_path = /obj/item/weapon/defibrillator
 	category = list("Medical")
 
-
-/datum/design/sensor_device
-	name = "Handheld Crew Monitor"
-	desc = "A device for tracking crew members on the station."
-	id = "sensor_device"
-	req_tech = list("programming" = 3, "magnets" = 2, "biotech" = 2)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 30, MAT_GLASS = 20)
-	build_path = /obj/item/device/sensor_device
-	category = list("Medical")
-
 /datum/design/mmi
 	name = "Man-Machine Interface"
 	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity."

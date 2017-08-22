@@ -213,65 +213,6 @@ BLIND     // can't see anything
 	else
 		..()
 
-/obj/item/clothing/under/proc/set_sensors(mob/user as mob)
-	var/mob/M = user
-	if(istype(M, /mob/dead/)) return
-	if(user.stat || user.restrained()) return
-	if(has_sensor >= 2)
-		to_chat(user, "The controls are locked.")
-		return 0
-	if(has_sensor <= 0)
-		to_chat(user, "This suit does not have any sensors.")
-		return 0
-
-	var/list/modes = list("Off", "Binary sensors", "Vitals tracker", "Tracking beacon")
-	var/switchMode = input("Select a sensor mode:", "Suit Sensor Mode", modes[sensor_mode + 1]) in modes
-	if(get_dist(user, src) > 1)
-		to_chat(user, "You have moved too far away.")
-		return
-	sensor_mode = modes.Find(switchMode) - 1
-
-	if(src.loc == user)
-		switch(sensor_mode)
-			if(0)
-				to_chat(user, "You disable your suit's remote sensing equipment.")
-			if(1)
-				to_chat(user, "Your suit will now report whether you are live or dead.")
-			if(2)
-				to_chat(user, "Your suit will now report your vital lifesigns.")
-			if(3)
-				to_chat(user, "Your suit will now report your vital lifesigns as well as your coordinate position.")
-		if(istype(user,/mob/living/carbon/human))
-			var/mob/living/carbon/human/H = user
-			if(H.w_uniform == src)
-				H.update_suit_sensors()
-
-	else if(istype(src.loc, /mob))
-		switch(sensor_mode)
-			if(0)
-				for(var/mob/V in viewers(user, 1))
-					V.show_message("<span class='warning'>[user] disables [src.loc]'s remote sensing equipment.</span>", 1)
-			if(1)
-				for(var/mob/V in viewers(user, 1))
-					V.show_message("[user] turns [src.loc]'s remote sensors to binary.", 1)
-			if(2)
-				for(var/mob/V in viewers(user, 1))
-					V.show_message("[user] sets [src.loc]'s sensors to track vitals.", 1)
-			if(3)
-				for(var/mob/V in viewers(user, 1))
-					V.show_message("[user] sets [src.loc]'s sensors to maximum.", 1)
-		if(istype(src,/mob/living/carbon/human))
-			var/mob/living/carbon/human/H = src
-			if(H.w_uniform == src)
-				H.update_suit_sensors()
-
-/obj/item/clothing/under/verb/toggle()
-	set name = "Toggle Suit Sensors"
-	set category = "Object"
-	set src in usr
-	set_sensors(usr)
-	..()
-
 //Head
 /obj/item/clothing/head
 	name = "head"
@@ -577,13 +518,6 @@ BLIND     // can't see anything
 		"Drask" = 'icons/mob/species/drask/uniform.dmi',
 		"Grey" = 'icons/mob/species/grey/uniform.dmi'
 		)
-	var/has_sensor = 1//For the crew computer 2 = unable to change mode
-	var/sensor_mode = 0
-		/*
-		1 = Report living/dead
-		2 = Report detailed damages
-		3 = Report location
-		*/
 	var/list/accessories = list()
 	var/displays_id = 1
 	var/rolled_down = 0
@@ -658,22 +592,6 @@ BLIND     // can't see anything
 			return
 	return
 
-/obj/item/clothing/under/examine(mob/user)
-	..(user)
-	switch(src.sensor_mode)
-		if(0)
-			to_chat(user, "Its sensors appear to be disabled.")
-		if(1)
-			to_chat(user, "Its binary life sensors appear to be enabled.")
-		if(2)
-			to_chat(user, "Its vital tracker appears to be enabled.")
-		if(3)
-			to_chat(user, "Its vital tracker and tracking beacon appear to be enabled.")
-	if(accessories.len)
-		for(var/obj/item/clothing/accessory/A in accessories)
-			to_chat(user, "\A [A] is attached to it.")
-
-
 /obj/item/clothing/under/verb/rollsuit()
 	set name = "Roll Down Jumpsuit"
 	set category = "Object"
@@ -713,10 +631,6 @@ BLIND     // can't see anything
 	else
 		A = accessories[1]
 	src.remove_accessory(usr,A)
-
-/obj/item/clothing/under/rank/New()
-	sensor_mode = pick(0,1,2,3)
-	..()
 
 /obj/item/clothing/under/emp_act(severity)
 	if(accessories.len)

@@ -39,15 +39,6 @@
 		var/mob/living/silicon/ai/AI = usr
 		AI.toggle_camera_light()
 
-/obj/screen/ai/crew_monitor
-	name = "Crew Monitoring Console"
-	icon_state = "crew_monitor"
-
-/obj/screen/ai/crew_monitor/Click()
-	if(isAI(usr))
-		var/mob/living/silicon/ai/AI = usr
-		AI.subsystem_crew_monitor()
-
 /obj/screen/ai/crew_manifest
 	name = "Crew Manifest"
 	icon_state = "manifest"
@@ -172,11 +163,6 @@
 //Camera light
 	using = new /obj/screen/ai/camera_light()
 	using.screen_loc = ui_ai_camera_light
-	static_inventory += using
-
-//Crew Monitorting
-	using = new  /obj/screen/ai/crew_monitor()
-	using.screen_loc = ui_ai_crew_monitor
 	static_inventory += using
 
 //Crew Manifest

@@ -19,20 +19,6 @@
 
 /datum/atom_hud/data/human/medical/basic
 
-/datum/atom_hud/data/human/medical/basic/proc/check_sensors(mob/living/carbon/human/H)
-	if(!istype(H)) return 0
-	var/obj/item/clothing/under/U = H.w_uniform
-	if(!istype(U)) return 0
-	if(U.sensor_mode <= 2) return 0
-	return 1
-
-/datum/atom_hud/data/human/medical/basic/add_to_single_hud(mob/M, mob/living/carbon/H)
-	if(check_sensors(H) || istype(M,/mob/dead/observer) )
-		..()
-
-/datum/atom_hud/data/human/medical/basic/proc/update_suit_sensors(mob/living/carbon/H)
-	check_sensors(H) ? add_to_hud(H) : remove_from_hud(H)
-
 /datum/atom_hud/data/human/medical/advanced
 
 /datum/atom_hud/data/human/security
@@ -55,9 +41,9 @@
  * THESE HOOKS SHOULD BE CALLED BY THE MOB SHOWING THE HUD
  */
 
-/***********************************************
- Medical HUD! Basic mode needs suit sensors on.
-************************************************/
+/************
+ Medical HUD
+************/
 
 //HELPERS
 
@@ -121,12 +107,6 @@
 	return "0"
 
 ///HOOKS
-
-//called when a human changes suit sensors
-/mob/living/carbon/proc/update_suit_sensors()
-	var/datum/atom_hud/data/human/medical/basic/B = huds[DATA_HUD_MEDICAL_BASIC]
-	B.update_suit_sensors(src)
-
 
 //called when a carbon changes health
 /mob/living/carbon/proc/med_hud_set_health()
