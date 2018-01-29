@@ -30,7 +30,7 @@
 	name = "Ice"
 	id = "ice"
 	description = "Frozen water, your dentist wouldn't like you chewing this."
-	reagent_state = SOLID
+
 	color = "#619494" // rgb: 97, 148, 148
 	adj_temp_cool = 0
 	drink_icon = "iceglass"
@@ -45,7 +45,7 @@
 	name = "Cola"
 	id = "cola"
 	description = "A refreshing beverage."
-	reagent_state = LIQUID
+
 	color = "#100800" // rgb: 16, 8, 0
 	adj_drowsy = -5
 	drink_icon = "glass_brown"

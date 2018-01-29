@@ -2,7 +2,7 @@
 	name = "Silicate"
 	id = "silicate"
 	description = "A compound that can be used to reinforce glass."
-	reagent_state = LIQUID
+
 	color = "#C7FFFF" // rgb: 199, 255, 255
 
 /datum/reagent/silicate/reaction_obj(obj/O, volume)
@@ -36,7 +36,7 @@
 	name = "Oxygen"
 	id = "oxygen"
 	description = "A colorless, odorless gas."
-	reagent_state = GAS
+
 	color = "#808080" // rgb: 128, 128, 128
 	taste_message = null
 
@@ -44,7 +44,7 @@
 	name = "Nitrogen"
 	id = "nitrogen"
 	description = "A colorless, odorless, tasteless gas."
-	reagent_state = GAS
+
 	color = "#808080" // rgb: 128, 128, 128
 	taste_message = null
 
@@ -52,7 +52,7 @@
 	name = "Hydrogen"
 	id = "hydrogen"
 	description = "A colorless, odorless, nonmetallic, tasteless, highly combustible diatomic gas."
-	reagent_state = GAS
+
 	color = "#808080" // rgb: 128, 128, 128
 	taste_message = null
 
@@ -60,7 +60,7 @@
 	name = "Potassium"
 	id = "potassium"
 	description = "A soft, low-melting solid that can easily be cut with a knife. Reacts violently with water."
-	reagent_state = SOLID
+
 	color = "#A0A0A0" // rgb: 160, 160, 160
 	taste_message = "bad ideas"
 
@@ -68,7 +68,7 @@
 	name = "Sulfur"
 	id = "sulfur"
 	description = "A chemical element."
-	reagent_state = SOLID
+
 	color = "#BF8C00" // rgb: 191, 140, 0
 	taste_message = "impulsive decisions"
 
@@ -76,7 +76,7 @@
 	name = "Sodium"
 	id = "sodium"
 	description = "A chemical element."
-	reagent_state = SOLID
+
 	color = "#808080" // rgb: 128, 128, 128
 	taste_message = "horrible misjudgement"
 
@@ -84,7 +84,7 @@
 	name = "Phosphorus"
 	id = "phosphorus"
 	description = "A chemical element."
-	reagent_state = SOLID
+
 	color = "#832828" // rgb: 131, 40, 40
 	taste_message = "misguided choices"
 
@@ -92,7 +92,7 @@
 	name = "Carbon"
 	id = "carbon"
 	description = "A chemical element."
-	reagent_state = SOLID
+
 	color = "#1C1300" // rgb: 30, 20, 0
 	taste_message = "like a pencil or something"
 
@@ -104,7 +104,7 @@
 	name = "Gold"
 	id = "gold"
 	description = "Gold is a dense, soft, shiny metal and the most malleable and ductile metal known."
-	reagent_state = SOLID
+
 	color = "#F7C430" // rgb: 247, 196, 48
 	taste_message = "bling"
 
@@ -113,7 +113,7 @@
 	name = "Silver"
 	id = "silver"
 	description = "A lustrous metallic element regarded as one of the precious metals."
-	reagent_state = SOLID
+
 	color = "#D0D0D0" // rgb: 208, 208, 208
 	taste_message = "sub-par bling"
 
@@ -122,7 +122,7 @@
 	name = "Aluminum"
 	id = "aluminum"
 	description = "A silvery white and ductile member of the boron group of chemical elements."
-	reagent_state = SOLID
+
 	color = "#A8A8A8" // rgb: 168, 168, 168
 	taste_message = null
 
@@ -131,7 +131,7 @@
 	name = "Silicon"
 	id = "silicon"
 	description = "A tetravalent metalloid, silicon is less reactive than its chemical analog carbon."
-	reagent_state = SOLID
+
 	color = "#A8A8A8" // rgb: 168, 168, 168
 	taste_message = "a CPU"
 
@@ -148,7 +148,7 @@
 	name = "Iron"
 	id = "iron"
 	description = "Pure iron is a metal."
-	reagent_state = SOLID
+
 	color = "#C8A5DC" // rgb: 200, 165, 220
 	taste_message = "metal"
 
@@ -165,7 +165,7 @@
 	name = "Fluorosurfactant"
 	id = "fluorosurfactant"
 	description = "A perfluoronated sulfonic acid that forms a foam when mixed with water."
-	reagent_state = LIQUID
+
 	color = "#9E6B38" // rgb: 158, 107, 56
 	taste_message = null
 
@@ -175,7 +175,7 @@
 	name = "Ammonia"
 	id = "ammonia"
 	description = "A caustic substance commonly used in fertilizer or household cleaners."
-	reagent_state = GAS
+
 	color = "#404030" // rgb: 64, 64, 48
 	taste_message = "floor cleaner"
 
@@ -183,7 +183,7 @@
 	name = "Diethylamine"
 	id = "diethylamine"
 	description = "A secondary amine, useful as a plant nutrient and as building block for other compounds."
-	reagent_state = LIQUID
+
 	color = "#322D00"
 	taste_message = null
 
@@ -191,7 +191,7 @@
 	name = "Oil"
 	id = "oil"
 	description = "A decent lubricant for machines. High in benzene, naptha and other hydrocarbons."
-	reagent_state = LIQUID
+
 	color = "#3C3C3C"
 	taste_message = "motor oil"
 
@@ -199,7 +199,7 @@
 	name = "Iodine"
 	id = "iodine"
 	description = "A purple gaseous element."
-	reagent_state = GAS
+
 	color = "#493062"
 	taste_message = null
 
@@ -207,7 +207,7 @@
 	name = "Carpet"
 	id = "carpet"
 	description = "A covering of thick fabric used on floors. This type looks particularly gross."
-	reagent_state = LIQUID
+
 	color = "#701345"
 	taste_message = "a carpet...what?"
 
@@ -221,7 +221,7 @@
 	name = "Bromine"
 	id = "bromine"
 	description = "A red-brown liquid element."
-	reagent_state = LIQUID
+
 	color = "#4E3A3A"
 	taste_message = null
 
@@ -229,7 +229,7 @@
 	name = "Phenol"
 	id = "phenol"
 	description = "Also known as carbolic acid, this is a useful building block in organic chemistry."
-	reagent_state = LIQUID
+
 	color = "#525050"
 	taste_message = null
 
@@ -237,7 +237,7 @@
 	name = "Ash"
 	id = "ash"
 	description = "Ashes to ashes, dust to dust."
-	reagent_state = LIQUID
+
 	color = "#191919"
 	taste_message = "ash"
 
@@ -245,7 +245,7 @@
 	name = "Acetone"
 	id = "acetone"
 	description = "Pure 100% nail polish remover, also works as an industrial solvent."
-	reagent_state = LIQUID
+
 	color = "#474747"
 	taste_message = null
 
@@ -257,7 +257,7 @@
 	name = "Saltpetre"
 	id = "saltpetre"
 	description = "Volatile."
-	reagent_state = LIQUID
+
 	color = "#60A584" // rgb: 96, 165, 132
 	taste_message = null
 
@@ -265,7 +265,7 @@
 	name = "Colorful Reagent"
 	id = "colorful_reagent"
 	description = "It's pure liquid colors. That's a thing now."
-	reagent_state = LIQUID
+
 	color = "#FFFFFF"
 	taste_message = "the rainbow"
 
@@ -284,7 +284,7 @@
 	name = "Quantum Hair Dye"
 	id = "hair_dye"
 	description = "A rather tubular and gnarly way of coloring totally bodacious hair. Duuuudddeee."
-	reagent_state = LIQUID
+
 	color = "#960096"
 	taste_message = "the 2559 Autumn release of the Le Jeune Homme catalogue for professional hairdressers"
 
@@ -304,7 +304,7 @@
 	name = "Hairgrownium"
 	id = "hairgrownium"
 	description = "A mysterious chemical purported to help grow hair. Often found on late-night TV infomercials."
-	reagent_state = LIQUID
+
 	color = "#5DDA5D"
 	penetrates_skin = TRUE
 	taste_message = "someone's beard"
@@ -323,7 +323,7 @@
 	name = "Super Hairgrownium"
 	id = "super_hairgrownium"
 	description = "A mysterious and powerful chemical purported to cause rapid hair growth."
-	reagent_state = LIQUID
+
 	color = "#5DD95D"
 	penetrates_skin = TRUE
 	taste_message = "multiple beards"
@@ -357,7 +357,7 @@
 	name = "Fartonium"
 	id = "fartonium"
 	description = "Oh god it never ends, IT NEVER STOPS!"
-	reagent_state = GAS
+
 	color = "#D06E27"
 	taste_message = "mexican cuisine"
 
@@ -381,7 +381,7 @@
 	name = "Pure hugs"
 	id = "hugs"
 	description = "Hugs, in liquid form.  Yes, the concept of a hug.  As a liquid.  This makes sense in the future."
-	reagent_state = LIQUID
+
 	color = "#FF97B9"
 	taste_message = "<font color='pink'><b>hugs</b></font>"
 
@@ -389,7 +389,7 @@
 	name = "Pure love"
 	id = "love"
 	description = "What is this emotion you humans call \"love?\"  Oh, it's this?  This is it? Huh, well okay then, thanks."
-	reagent_state = LIQUID
+
 	color = "#FF83A5"
 	process_flags = ORGANIC | SYNTHETIC // That's the power of love~
 	taste_message = "<font color='pink'><b>love</b></font>"
@@ -470,7 +470,7 @@
 	name = "Coffee Grounds"
 	id = "coffeepowder"
 	description = "Finely ground Coffee beans, used to make coffee."
-	reagent_state = SOLID
+
 	color = "#5B2E0D" // rgb: 91, 46, 13
 	taste_message = "bitterness"
 
@@ -478,7 +478,7 @@
 	name = "Ground Tea Leaves"
 	id = "teapowder"
 	description = "Finely shredded Tea leaves, used for making tea."
-	reagent_state = SOLID
+
 	color = "#7F8400" // rgb: 127, 132, 0"
 	taste_message = "bitterness"
 
@@ -524,33 +524,33 @@
 	name = "Eye of newt"
 	id = "eyenewt"
 	description = "A potent alchemic ingredient."
-	reagent_state = LIQUID
+
 	color = "#050519"
 
 /datum/reagent/toefrog
 	name = "Toe of frog"
 	id = "toefrog"
 	description = "A potent alchemic ingredient."
-	reagent_state = LIQUID
+
 	color = "#092D09"
 
 /datum/reagent/woolbat
 	name = "Wool of bat"
 	id = "woolbat"
 	description = "A potent alchemic ingredient."
-	reagent_state = LIQUID
+
 	color = "#080808"
 
 /datum/reagent/tonguedog
 	name = "Tongue of dog"
 	id = "tonguedog"
 	description = "A potent alchemic ingredient."
-	reagent_state = LIQUID
+
 	color = "#2D0909"
 
 /datum/reagent/triplepiss
 	name = "Triplepiss"
 	id = "triplepiss"
 	description = "Ewwwwwwwww."
-	reagent_state = LIQUID
+
 	color = "#857400"

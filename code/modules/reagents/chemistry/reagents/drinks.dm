@@ -78,7 +78,7 @@
 	name = "The Doctor's Delight"
 	id = "doctorsdelight"
 	description = "A gulp a day keeps the MediBot away. That's probably for the best."
-	reagent_state = LIQUID
+
 	color = "#FF8CFF" // rgb: 255, 140, 255
 	drink_icon = "doctorsdelightglass"
 	drink_name = "Doctor's Delight"
@@ -94,7 +94,7 @@
 	name = "Triple Citrus"
 	id = "triple_citrus"
 	description = "A refreshing mixed drink of orange, lemon and lime juice."
-	reagent_state = LIQUID
+
 	color = "#23A046"
 	drink_icon = "triplecitrus"
 	drink_name = "Glass of Triplecitrus Juice"

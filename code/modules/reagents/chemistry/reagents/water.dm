@@ -11,7 +11,7 @@
 	name = "Water"
 	id = "water"
 	description = "A ubiquitous chemical substance that is composed of hydrogen and oxygen."
-	reagent_state = LIQUID
+
 	color = "#0064C8" // rgb: 0, 100, 200
 	var/cooling_temperature = 2
 	process_flags = ORGANIC | SYNTHETIC
@@ -114,7 +114,7 @@
 	name = "Space Lube"
 	id = "lube"
 	description = "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them. giggity."
-	reagent_state = LIQUID
+
 	color = "#1BB1AB"
 	taste_message = "oil"
 
@@ -127,7 +127,7 @@
 	name = "Space cleaner"
 	id = "cleaner"
 	description = "A compound used to clean things. Now with 50% more sodium hypochlorite!"
-	reagent_state = LIQUID
+
 	color = "#61C2C2"
 	taste_message = "floor cleaner"
 
@@ -197,7 +197,7 @@
 	data = list("donor"=null,"viruses"=null,"blood_DNA"=null,"blood_type"=null,"blood_colour"="#A10808","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
 	name = "Blood"
 	id = "blood"
-	reagent_state = LIQUID
+
 	color = "#C80000" // rgb: 200, 0, 0
 	metabolization_rate = 5 //fast rate so it disappears fast.
 	drink_icon = "glass_red"
@@ -302,7 +302,7 @@
 	name = "Fish Water"
 	id = "fishwater"
 	description = "Smelly water from a fish tank. Gross!"
-	reagent_state = LIQUID
+
 	color = "#757547"
 	taste_message = "puke"
 
@@ -322,7 +322,7 @@
 	name = "Toilet Water"
 	id = "toiletwater"
 	description = "Filthy water scoured from a nasty toilet bowl. Absolutely disgusting."
-	reagent_state = LIQUID
+
 	color = "#757547"
 	taste_message = "puke"
 
@@ -333,7 +333,7 @@
 	name = "Water"
 	id = "holywater"
 	description = "A ubiquitous chemical substance that is composed of hydrogen and oxygen."
-	reagent_state = LIQUID
+
 	color = "#0064C8" // rgb: 0, 100, 200
 	process_flags = ORGANIC | SYNTHETIC
 	drink_icon = "glass_clear"
@@ -482,7 +482,7 @@
 	id = "liquidgibs"
 	color = "#FF9966"
 	description = "You don't even want to think about what's in here."
-	reagent_state = LIQUID
+
 	taste_message = "meat"
 
 /datum/reagent/liquidgibs/reaction_turf(turf/T, volume) //yes i took it from synthflesh...
@@ -494,7 +494,7 @@
 	name = "Lye"
 	id = "lye"
 	description = "Also known as sodium hydroxide."
-	reagent_state = LIQUID
+
 	color = "#FFFFD6" // very very light yellow
 	taste_message = "<span class='userdanger'>ACID</span>"//don't drink lye, kids
 
@@ -502,7 +502,7 @@
 	name = "Drying agent"
 	id = "drying_agent"
 	description = "Can be used to dry things."
-	reagent_state = LIQUID
+
 	color = "#A70FFF"
 
 /datum/reagent/drying_agent/reaction_turf(turf/simulated/T, volume)

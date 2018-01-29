@@ -2,7 +2,7 @@
 	name = "Serotrotium"
 	id = "serotrotium"
 	description = "A chemical compound that promotes concentrated production of the serotonin neurotransmitter in humans."
-	reagent_state = LIQUID
+
 	color = "#202040" // rgb: 20, 20, 40
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 
@@ -17,7 +17,7 @@
 	name = "Lithium"
 	id = "lithium"
 	description = "A chemical element."
-	reagent_state = SOLID
+
 	color = "#808080" // rgb: 128, 128, 128
 
 /datum/reagent/lithium/on_mob_life(mob/living/M)
@@ -31,7 +31,7 @@
 	name = "Lysergic acid diethylamide"
 	id = "lsd"
 	description = "A highly potent hallucinogenic substance. Far out, maaaan."
-	reagent_state = LIQUID
+
 	color = "#0000D8"
 
 /datum/reagent/lsd/on_mob_life(mob/living/M)
@@ -43,7 +43,7 @@
 	name = "Space drugs"
 	id = "space_drugs"
 	description = "An illegal chemical compound used as drug."
-	reagent_state = LIQUID
+
 	color = "#9087A2"
 	metabolization_rate = 0.2
 	addiction_chance = 65
@@ -88,7 +88,7 @@
 	name = "Nicotine"
 	id = "nicotine"
 	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage."
-	reagent_state = LIQUID
+
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 35
 	addiction_chance = 70
@@ -149,7 +149,7 @@
 	name = "Crank"
 	id = "crank"
 	description = "Reduces stun times by about 200%. If overdosed or addicted it will deal significant Toxin, Brute and Brain damage."
-	reagent_state = LIQUID
+
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 20
 	addiction_chance = 50
@@ -217,7 +217,7 @@
 	name = "Krokodil"
 	id = "krokodil"
 	description = "A sketchy homemade opiate, often used by disgruntled Cosmonauts."
-	reagent_state = LIQUID
+
 	color = "#0264B4"
 	overdose_threshold = 20
 	addiction_chance = 50
@@ -284,7 +284,7 @@
 	name = "Methamphetamine"
 	id = "methamphetamine"
 	description = "Reduces stun times by about 300%, speeds the user up, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage."
-	reagent_state = LIQUID
+
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 20
 	addiction_chance = 60
@@ -340,7 +340,7 @@
 	name = "Bath Salts"
 	id = "bath_salts"
 	description = "Sometimes packaged as a refreshing bathwater additive, these crystals are definitely not for human consumption."
-	reagent_state = SOLID
+
 	color = "#FAFAFA"
 	overdose_threshold = 20
 	addiction_chance = 80
@@ -436,7 +436,7 @@
 	name = "Jenkem"
 	id = "jenkem"
 	description = "Jenkem is a prison drug made from fermenting feces in a solution of urine. Extremely disgusting."
-	reagent_state = LIQUID
+
 	color = "#644600"
 	addiction_chance = 30
 	taste_message = "puke... or worse"
@@ -452,7 +452,7 @@
 	name = "Aranesp"
 	id = "aranesp"
 	description = "An illegal performance enhancing drug. Side effects might include chest pain, seizures, swelling, headache, fever... ... ..."
-	reagent_state = LIQUID
+
 	color = "#60A584" // rgb: 96, 165, 132
 
 /datum/reagent/aranesp/on_mob_life(mob/living/M)
@@ -475,7 +475,7 @@
 	name = "Tetrahydrocannabinol"
 	id = "thc"
 	description = "A mild psychoactive chemical extracted from the cannabis plant."
-	reagent_state = LIQUID
+
 	color = "#0FBE0F"
 
 /datum/reagent/thc/on_mob_life(mob/living/M)
@@ -495,7 +495,7 @@
 	name = "Fliptonium"
 	id = "fliptonium"
 	description = "Do some flips!"
-	reagent_state = LIQUID
+
 	color = "#A42964"
 	metabolization_rate = 0.2
 	overdose_threshold = 15
@@ -571,7 +571,7 @@
 	name = "Ultra-Lube"
 	id = "ultralube"
 	description = "Ultra-Lube is an enhanced lubricant which induces effect similar to Methamphetamine in synthetic users by drastically reducing internal friction and increasing cooling capabilities."
-	reagent_state = LIQUID
+
 	color = "#1BB1FF"
 	process_flags = SYNTHETIC
 	overdose_threshold = 20
@@ -619,7 +619,7 @@
 	name = "Surge"
 	id = "surge"
 	description = "A sketchy superconducting gel that overloads processors, causing an effect reportedly similar to opiates in synthetic units."
-	reagent_state = LIQUID
+
 	color = "#6DD16D"
 
 	process_flags = SYNTHETIC

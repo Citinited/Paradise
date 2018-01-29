@@ -2,7 +2,7 @@
 	name = "Toxin"
 	id = "toxin"
 	description = "A Toxic chemical."
-	reagent_state = LIQUID
+
 	color = "#CF3600" // rgb: 207, 54, 0
 
 /datum/reagent/toxin/on_mob_life(mob/living/M)
@@ -13,7 +13,7 @@
 	name = "Spider venom"
 	id = "spidertoxin"
 	description = "A toxic venom injected by spacefaring arachnids."
-	reagent_state = LIQUID
+
 	color = "#CF3600" // rgb: 207, 54, 0
 
 /datum/reagent/spider_venom/on_mob_life(mob/living/M)
@@ -24,7 +24,7 @@
 	name = "Plasticide"
 	id = "plasticide"
 	description = "Liquid plastic, do not eat."
-	reagent_state = LIQUID
+
 	color = "#CF3600" // rgb: 207, 54, 0
 
 /datum/reagent/plasticide/on_mob_life(mob/living/M)
@@ -36,7 +36,7 @@
 	name = "Mint Toxin"
 	id = "minttoxin"
 	description = "Useful for dealing with undesirable customers."
-	reagent_state = LIQUID
+
 	color = "#CF3600" // rgb: 207, 54, 0
 	taste_message = "mint"
 
@@ -49,7 +49,7 @@
 	name = "Slime Jelly"
 	id = "slimejelly"
 	description = "A gooey semi-liquid produced from one of the deadliest lifeforms in existence. SO REAL."
-	reagent_state = LIQUID
+
 	color = "#801E28" // rgb: 128, 30, 40
 	taste_message = "slimes"
 
@@ -65,7 +65,7 @@
 	name = "Mutation Toxin"
 	id = "mutationtoxin"
 	description = "A corruptive toxin produced by slimes."
-	reagent_state = LIQUID
+
 	color = "#13BC5E" // rgb: 19, 188, 94
 	can_synth = FALSE
 	taste_message = "shadows"
@@ -85,7 +85,7 @@
 	name = "Advanced Mutation Toxin"
 	id = "amutationtoxin"
 	description = "An advanced corruptive toxin produced by slimes."
-	reagent_state = LIQUID
+
 	color = "#13BC5E" // rgb: 19, 188, 94
 	can_synth = FALSE
 
@@ -98,7 +98,7 @@
 	name = "Mercury"
 	id = "mercury"
 	description = "A chemical element."
-	reagent_state = LIQUID
+
 	color = "#484848" // rgb: 72, 72, 72
 	metabolization_rate = 0.2
 	penetrates_skin = TRUE
@@ -113,7 +113,7 @@
 	name = "Chlorine"
 	id = "chlorine"
 	description = "A chemical element."
-	reagent_state = GAS
+
 	color = "#808080" // rgb: 128, 128, 128
 	penetrates_skin = TRUE
 	process_flags = ORGANIC | SYNTHETIC
@@ -127,7 +127,7 @@
 	name = "Fluorine"
 	id = "fluorine"
 	description = "A highly-reactive chemical element."
-	reagent_state = GAS
+
 	color = "#6A6054"
 	penetrates_skin = TRUE
 	process_flags = ORGANIC | SYNTHETIC
@@ -142,7 +142,7 @@
 	name = "Radium"
 	id = "radium"
 	description = "Radium is an alkaline earth metal. It is extremely radioactive."
-	reagent_state = SOLID
+
 	color = "#C7C7C7" // rgb: 199,199,199
 	penetrates_skin = TRUE
 
@@ -159,7 +159,7 @@
 	name = "Unstable mutagen"
 	id = "mutagen"
 	description = "Might cause unpredictable mutations. Keep away from children."
-	reagent_state = LIQUID
+
 	color = "#04DF27"
 	metabolization_rate = 0.3
 
@@ -186,7 +186,7 @@
 	name ="Uranium"
 	id = "uranium"
 	description = "A silvery-white metallic chemical element in the actinide series, weakly radioactive."
-	reagent_state = SOLID
+
 	color = "#B8B8C0" // rgb: 184, 184, 192
 	taste_message = null
 
@@ -203,7 +203,7 @@
 	name = "Lexorin"
 	id = "lexorin"
 	description = "Lexorin temporarily stops respiration. Causes tissue damage."
-	reagent_state = LIQUID
+
 	color = "#52685D"
 	metabolization_rate = 0.2
 
@@ -216,7 +216,7 @@
 	name = "Sulphuric acid"
 	id = "sacid"
 	description = "A strong mineral acid with the molecular formula H2SO4."
-	reagent_state = LIQUID
+
 	color = "#00D72B"
 	process_flags = ORGANIC | SYNTHETIC
 	taste_message = "<span class='userdanger'>ACID</span>"
@@ -290,7 +290,7 @@
 	name = "Carpotoxin"
 	id = "carpotoxin"
 	description = "A deadly neurotoxin produced by the dreaded spess carp."
-	reagent_state = LIQUID
+
 	color = "#003333" // rgb: 0, 51, 51
 
 /datum/reagent/carpotoxin/on_mob_life(mob/living/M)
@@ -301,7 +301,7 @@
 	name = "Tirizene"
 	id = "tirizene"
 	description = "A toxin that affects the stamina of a person when injected into the bloodstream."
-	reagent_state = LIQUID
+
 	color = "#6E2828"
 	data = 13
 
@@ -347,7 +347,7 @@
 	name = "Polonium"
 	id = "polonium"
 	description = "Cause significant Radiation damage over time."
-	reagent_state = LIQUID
+
 	color = "#CF3600"
 	metabolization_rate = 0.1
 	penetrates_skin = TRUE
@@ -362,7 +362,7 @@
 	name = "Histamine"
 	id = "histamine"
 	description = "Immune-system neurotransmitter. If detected in blood, the subject is likely undergoing an allergic reaction."
-	reagent_state = LIQUID
+
 	color = "#E7C4C4"
 	metabolization_rate = 0.2
 	overdose_threshold = 40
@@ -436,7 +436,7 @@
 	name = "Formaldehyde"
 	id = "formaldehyde"
 	description = "Formaldehyde is a common industrial chemical and is used to preserve corpses and medical samples. It is highly toxic and irritating."
-	reagent_state = LIQUID
+
 	color = "#DED6D0"
 	penetrates_skin = TRUE
 
@@ -450,7 +450,7 @@
 	name = "Venom"
 	id = "venom"
 	description = "An incredibly potent poison. Origin unknown."
-	reagent_state = LIQUID
+
 	color = "#CF3600"
 	metabolization_rate = 0.2
 	overdose_threshold = 40
@@ -482,7 +482,7 @@
 	name = "Neurotoxin"
 	id = "neurotoxin2"
 	description = "A dangerous toxin that attacks the nervous system."
-	reagent_state = LIQUID
+
 	color = "#60A584"
 	metabolization_rate = 1
 
@@ -519,7 +519,7 @@
 	name = "Cyanide"
 	id = "cyanide"
 	description = "A highly toxic chemical with some uses as a building block for other things."
-	reagent_state = LIQUID
+
 	color = "#CF3600"
 	metabolization_rate = 0.1
 	penetrates_skin = TRUE
@@ -543,7 +543,7 @@
 	name = "Itching Powder"
 	id = "itching_powder"
 	description = "An abrasive powder beloved by cruel pranksters."
-	reagent_state = LIQUID
+
 	color = "#B0B0B0"
 	metabolization_rate = 0.3
 	penetrates_skin = TRUE
@@ -577,7 +577,7 @@
 	name = "Fluorosulfuric Acid"
 	id = "facid"
 	description = "Fluorosulfuric acid is a an extremely corrosive super-acid."
-	reagent_state = LIQUID
+
 	color = "#4141D2"
 	process_flags = ORGANIC | SYNTHETIC
 	taste_message = "<span class='userdanger'>ACID</span>"
@@ -641,7 +641,7 @@
 	name = "Initropidril"
 	id = "initropidril"
 	description = "A highly potent cardiac poison - can kill within minutes."
-	reagent_state = LIQUID
+
 	color = "#7F10C0"
 	can_synth = FALSE
 	taste_message = null
@@ -672,7 +672,7 @@
 	name = "Pancuronium"
 	id = "pancuronium"
 	description = "Pancuronium bromide is a powerful skeletal muscle relaxant."
-	reagent_state = LIQUID
+
 	color = "#1E4664"
 	metabolization_rate = 0.2
 	taste_message = null
@@ -705,7 +705,7 @@
 	name = "Sodium Thiopental"
 	id = "sodium_thiopental"
 	description = "An rapidly-acting barbituate tranquilizer."
-	reagent_state = LIQUID
+
 	color = "#5F8BE1"
 	metabolization_rate = 0.7
 	can_synth = FALSE
@@ -733,7 +733,7 @@
 	name = "Ketamine"
 	id = "ketamine"
 	description = "A potent veterinary tranquilizer."
-	reagent_state = LIQUID
+
 	color = "#646EA0"
 	metabolization_rate = 0.8
 	penetrates_skin = TRUE
@@ -760,7 +760,7 @@
 	name = "Sulfonal"
 	id = "sulfonal"
 	description = "Deals some toxin damage, and puts you to sleep after 66 seconds."
-	reagent_state = LIQUID
+
 	color = "#6BA688"
 	metabolization_rate = 0.1
 
@@ -786,7 +786,7 @@
 	name = "Amanitin"
 	id = "amanitin"
 	description = "A toxin produced by certain mushrooms. Very deadly."
-	reagent_state = LIQUID
+
 	color = "#D9D9D9"
 	taste_message = null
 
@@ -798,7 +798,7 @@
 	name = "Lipolicide"
 	id = "lipolicide"
 	description = "A compound found in many seedy dollar stores in the form of a weight-loss tonic."
-	reagent_state = SOLID
+
 	color = "#D1DED1"
 	metabolization_rate = 0.2
 	taste_message = "battery acid"
@@ -822,7 +822,7 @@
 	name = "Coniine"
 	id = "coniine"
 	description = "A neurotoxin that rapidly causes respiratory failure."
-	reagent_state = LIQUID
+
 	color = "#C2D8CD"
 	metabolization_rate = 0.05
 	can_synth = FALSE
@@ -836,7 +836,7 @@
 	name = "Curare"
 	id = "curare"
 	description = "A highly dangerous paralytic poison."
-	reagent_state = LIQUID
+
 	color = "#191919"
 	metabolization_rate = 0.1
 	penetrates_skin = TRUE
@@ -869,7 +869,7 @@
 	name = "Heparin"
 	id = "heparin"
 	description = "A powerful anticoagulant. Victims will bleed uncontrollably and suffer scaling bruising."
-	reagent_state = LIQUID
+
 	color = "#C8C8C8" //RGB: 200, 200, 200
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 
@@ -884,7 +884,7 @@
 	name = "Sarin"
 	id = "sarin"
 	description = "An extremely deadly neurotoxin."
-	reagent_state = LIQUID
+
 	color = "#C7C7C7"
 	metabolization_rate = 0.1
 	penetrates_skin = TRUE
@@ -941,7 +941,7 @@
 	name = "Glyphosate"
 	id = "glyphosate"
 	description = "A broad-spectrum herbicide that is highly effective at killing all plants."
-	reagent_state = LIQUID
+
 	color = "#d3cf50"
 	var/lethality = 0 //Glyphosate is non-toxic to people
 
@@ -986,7 +986,7 @@
 	name = "Atrazine"
 	id = "atrazine"
 	description = "A herbicidal compound used for destroying unwanted plants."
-	reagent_state = LIQUID
+
 	color = "#17002D"
 	lethality = 2 //Atrazine, however, is definitely toxic
 
@@ -1015,7 +1015,7 @@
 	name = "Capulettium"
 	id = "capulettium"
 	description = "A rare drug that causes the user to appear dead for some time."
-	reagent_state = LIQUID
+
 	color = "#60A584"
 	heart_rate_stop = 1
 	taste_message = "sweetness"
@@ -1039,7 +1039,7 @@
 	name = "Capulettium Plus"
 	id = "capulettium_plus"
 	description = "A rare and expensive drug that causes the user to appear dead for some time while they retain consciousness and vision."
-	reagent_state = LIQUID
+
 	color = "#60A584"
 	heart_rate_stop = 1
 	taste_message = "sweetness"
@@ -1052,7 +1052,7 @@
 	name = "Toxic Slurry"
 	id = "toxic_slurry"
 	description = "A filthy, carcinogenic sludge produced by the Slurrypod plant."
-	reagent_state = LIQUID
+
 	color = "#00C81E"
 
 /datum/reagent/toxic_slurry/on_mob_life(mob/living/M)
@@ -1069,7 +1069,7 @@
 	name = "Glowing Slurry"
 	id = "glowing_slurry"
 	description = "This is probably not good for you."
-	reagent_state = LIQUID
+
 	color = "#00FD00"
 
 /datum/reagent/glowing_slurry/reaction_mob(mob/living/M, method=TOUCH, volume) //same as mutagen
@@ -1098,7 +1098,7 @@
 	name = "Ants"
 	id = "ants"
 	description = "A sample of a lost breed of Space Ants (formicidae bastardium tyrannus), they are well-known for ravaging the living shit out of pretty much anything."
-	reagent_state = SOLID
+
 	color = "#993333"
 	process_flags = ORGANIC | SYNTHETIC
 	taste_message = "<span class='warning'>ANTS OH GOD</span>"
@@ -1118,7 +1118,7 @@
 	name = "Teslium"
 	id = "teslium"
 	description = "An unstable, electrically-charged metallic slurry. Increases the conductance of living things."
-	reagent_state = LIQUID
+
 	color = "#20324D" //RGB: 32, 50, 77
 	metabolization_rate = 0.2
 	var/shock_timer = 0

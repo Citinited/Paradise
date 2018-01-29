@@ -2,7 +2,7 @@
 	name = "Welding fuel"
 	id = "fuel"
 	description = "A highly flammable blend of basic hydrocarbons, mostly Acetylene. Useful for both welding and organic chemistry, and can be fortified into a heavier oil."
-	reagent_state = LIQUID
+
 	color = "#060606"
 	drink_icon = "dr_gibb_glass"
 	drink_name = "Glass of welder fuel"
@@ -19,7 +19,7 @@
 	name = "Plasma"
 	id = "plasma"
 	description = "The liquid phase of an unusual extraterrestrial compound."
-	reagent_state = LIQUID
+
 	color = "#7A2B94"
 	taste_message = "corporate assets going to waste"
 
@@ -42,7 +42,7 @@
 	name = "Thermite"
 	id = "thermite"
 	description = "Thermite produces an aluminothermic reaction known as a thermite reaction. Can be used to melt walls."
-	reagent_state = SOLID
+
 	color = "#673910" // rgb: 103, 57, 16
 	process_flags = ORGANIC | SYNTHETIC
 	taste_message = "rust"
@@ -57,7 +57,7 @@
 	name = "Glycerol"
 	id = "glycerol"
 	description = "Glycerol is a simple polyol compound. Glycerol is sweet-tasting and of low toxicity."
-	reagent_state = LIQUID
+
 	color = "#808080" // rgb: 128, 128, 128
 	taste_message = "sweetness"
 
@@ -65,7 +65,7 @@
 	name = "Stabilizing Agent"
 	id = "stabilizing_agent"
 	description = "A chemical that stabilises normally volatile compounds, preventing them from reacting immediately."
-	reagent_state = LIQUID
+
 	color = "#FFFF00"
 	taste_message = "long-term stability"
 
@@ -73,7 +73,7 @@
 	name = "Chlorine Trifluoride"
 	id = "clf3"
 	description = "An extremely volatile substance, handle with the utmost care."
-	reagent_state = LIQUID
+
 	color = "#FF0000"
 	metabolization_rate = 4
 	process_flags = ORGANIC | SYNTHETIC
@@ -111,14 +111,14 @@
 	name = "Sorium"
 	id = "sorium"
 	description = "Sends everything flying from the detonation point."
-	reagent_state = LIQUID
+
 	color = "#FFA500"
 
 /datum/reagent/liquid_dark_matter
 	name = "Liquid Dark Matter"
 	id = "liquid_dark_matter"
 	description = "Sucks everything into the detonation point."
-	reagent_state = LIQUID
+
 	color = "#800080"
 	taste_message = "the end of the world"
 
@@ -126,7 +126,7 @@
 	name = "Black Powder"
 	id = "blackpowder"
 	description = "Explodes. Violently."
-	reagent_state = LIQUID
+
 	color = "#000000"
 	metabolization_rate = 0.05
 	penetrates_skin = TRUE
@@ -152,28 +152,28 @@
 	name = "Flash Powder"
 	id = "flash_powder"
 	description = "Makes a very bright flash."
-	reagent_state = LIQUID
+
 	color = "#FFFF00"
 
 /datum/reagent/smoke_powder
 	name = "Smoke Powder"
 	id = "smoke_powder"
 	description = "Makes a large cloud of smoke that can carry reagents."
-	reagent_state = LIQUID
+
 	color = "#808080"
 
 /datum/reagent/sonic_powder
 	name = "Sonic Powder"
 	id = "sonic_powder"
 	description = "Makes a deafening noise."
-	reagent_state = LIQUID
+
 	color = "#0000FF"
 
 /datum/reagent/phlogiston
 	name = "Phlogiston"
 	id = "phlogiston"
 	description = "Catches you on fire and makes you ignite."
-	reagent_state = LIQUID
+
 	color = "#FF9999"
 	process_flags = ORGANIC | SYNTHETIC
 
@@ -192,7 +192,7 @@
 	name = "Napalm"
 	id = "napalm"
 	description = "Very flammable."
-	reagent_state = LIQUID
+
 	color = "#FF9999"
 	process_flags = ORGANIC | SYNTHETIC
 
@@ -253,7 +253,7 @@
 	name = "Firefighting foam"
 	id = "firefighting_foam"
 	description = "Carbon Tetrachloride is a foam used for fire suppression."
-	reagent_state = LIQUID
+
 	color = "#A0A090"
 	var/cooling_temperature = 3 // more effective than water
 

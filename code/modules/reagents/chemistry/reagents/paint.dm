@@ -2,7 +2,7 @@
 	name = "Paint"
 	id = "paint_"
 	description = "Floor paint is used to color floor tiles."
-	reagent_state = LIQUID
+
 	color = "#808080"
 	taste_message = "paint"
 
@@ -53,7 +53,7 @@
 	name = "Paint Remover"
 	id = "paint_remover"
 	description = "Paint remover is used to remove floor paint from floor tiles."
-	reagent_state = LIQUID
+
 	color = "#808080"
 	taste_message = "alcohol"
 

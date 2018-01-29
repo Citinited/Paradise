@@ -10,7 +10,7 @@
 	name = "Hydrocodone"
 	id = "hydrocodone"
 	description = "An extremely effective painkiller; may have long term abuse consequences."
-	reagent_state = LIQUID
+
 	color = "#C805DC"
 	metabolization_rate = 0.3 // Lasts 1.5 minutes for 15 units
 	shock_reduction = 200
@@ -26,7 +26,7 @@
 	name = "Sterilizine"
 	id = "sterilizine"
 	description = "Sterilizes wounds in preparation for surgery."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 	//makes you squeaky clean
@@ -44,7 +44,7 @@
 	name = "Synaptizine"
 	id = "synaptizine"
 	description = "Synaptizine is used to treat neuroleptic shock. Can be used to help remove disabling symptoms such as paralysis."
-	reagent_state = LIQUID
+
 	color = "#FA46FA"
 	overdose_threshold = 40
 
@@ -83,7 +83,7 @@
 	name = "Mitocholide"
 	id = "mitocholide"
 	description = "A specialized drug that stimulates the mitochondria of cells to encourage healing of internal organs."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 /datum/reagent/medicine/mitocholide/on_mob_life(mob/living/M)
@@ -104,7 +104,7 @@
 	name = "Cryoxadone"
 	id = "cryoxadone"
 	description = "A plasma mixture with almost magical healing powers. Its main limitation is that the targets body temperature must be under 265K for it to metabolise correctly."
-	reagent_state = LIQUID
+
 	color = "#0000C8" // rgb: 200, 165, 220
 	heart_rate_decrease = 1
 
@@ -122,7 +122,7 @@
 	name = "Rezadone"
 	id = "rezadone"
 	description = "A powder derived from fish toxin, Rezadone can effectively treat genetic damage as well as restoring minor wounds. Overdose will cause intense nausea and minor toxin damage."
-	reagent_state = SOLID
+
 	color = "#669900" // rgb: 102, 153, 0
 	overdose_threshold = 30
 
@@ -143,7 +143,7 @@
 	name = "Spaceacillin"
 	id = "spaceacillin"
 	description = "An all-purpose antibiotic agent extracted from space fungus."
-	reagent_state = LIQUID
+
 	color = "#0AB478"
 	metabolization_rate = 0.2
 
@@ -151,7 +151,7 @@
 	name = "Silver Sulfadiazine"
 	id = "silver_sulfadiazine"
 	description = "This antibacterial compound is used to treat burn victims."
-	reagent_state = LIQUID
+
 	color = "#F0C814"
 	metabolization_rate = 3
 
@@ -175,7 +175,7 @@
 	name = "Styptic Powder"
 	id = "styptic_powder"
 	description = "Styptic (aluminium sulfate) powder helps control bleeding and heal physical wounds."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	metabolization_rate = 3
 
@@ -200,7 +200,7 @@
 	name = "Saline-Glucose Solution"
 	id = "salglu_solution"
 	description = "This saline and glucose solution can help stabilize critically injured patients and cleanse wounds."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	penetrates_skin = TRUE
 	metabolization_rate = 0.15
@@ -221,7 +221,7 @@
 	name = "Synthflesh"
 	id = "synthflesh"
 	description = "A resorbable microfibrillar collagen and protein mixture that can rapidly heal injuries when applied topically."
-	reagent_state = LIQUID
+
 	color = "#FFEBEB"
 
 /datum/reagent/medicine/synthflesh/reaction_mob(mob/living/M, method=TOUCH, volume, show_message = 1)
@@ -242,7 +242,7 @@
 	name = "Charcoal"
 	id = "charcoal"
 	description = "Activated charcoal helps to absorb toxins."
-	reagent_state = LIQUID
+
 	color = "#000000"
 
 /datum/reagent/medicine/charcoal/on_mob_life(mob/living/M)
@@ -257,7 +257,7 @@
 	name = "Omnizine"
 	id = "omnizine"
 	description = "Omnizine is a highly potent healing medication that can be used to treat a wide range of injuries."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	metabolization_rate = 0.2
 	overdose_threshold = 30
@@ -310,7 +310,7 @@
 	name = "Calomel"
 	id = "calomel"
 	description = "This potent purgative rids the body of impurities. It is highly toxic however and close supervision is required."
-	reagent_state = LIQUID
+
 	color = "#22AB35"
 	metabolization_rate = 0.8
 
@@ -328,7 +328,7 @@
 	name = "Potassium Iodide"
 	id = "potass_iodide"
 	description = "Potassium Iodide is a medicinal drug used to counter the effects of radiation poisoning."
-	reagent_state = LIQUID
+
 	color = "#B4DCBE"
 
 /datum/reagent/medicine/potass_iodide/on_mob_life(mob/living/M)
@@ -340,7 +340,7 @@
 	name = "Pentetic Acid"
 	id = "pen_acid"
 	description = "Pentetic Acid is an aggressive chelation agent. May cause tissue damage. Use with caution."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 
 /datum/reagent/medicine/pen_acid/on_mob_life(mob/living/M)
@@ -359,7 +359,7 @@
 	name = "Salicylic Acid"
 	id = "sal_acid"
 	description = "This is a is a standard salicylate pain reliever and fever reducer."
-	reagent_state = LIQUID
+
 	color = "#B3B3B3"
 	metabolization_rate = 0.1
 	shock_reduction = 25
@@ -378,7 +378,7 @@
 	name = "Salbutamol"
 	id = "salbutamol"
 	description = "Salbutamol is a common bronchodilation medication for asthmatics. It may help with other breathing problems as well."
-	reagent_state = LIQUID
+
 	color = "#00FFFF"
 	metabolization_rate = 0.2
 
@@ -391,7 +391,7 @@
 	name = "Perfluorodecalin"
 	id = "perfluorodecalin"
 	description = "This experimental perfluoronated solvent has applications in liquid breathing and tissue oxygenation. Use with caution."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	metabolization_rate = 0.2
 	addiction_chance = 20
@@ -410,7 +410,7 @@
 	name = "Ephedrine"
 	id = "ephedrine"
 	description = "Ephedrine is a plant-derived stimulant."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	metabolization_rate = 0.3
 	overdose_threshold = 35
@@ -456,7 +456,7 @@
 	name = "Diphenhydramine"
 	id = "diphenhydramine"
 	description = "Anti-allergy medication. May cause drowsiness, do not operate heavy machinery while using this."
-	reagent_state = LIQUID
+
 	color = "#5BCBE1"
 	addiction_chance = 10
 
@@ -476,7 +476,7 @@
 	name = "Morphine"
 	id = "morphine"
 	description = "A strong but highly addictive opiate painkiller with sedative side effects."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	overdose_threshold = 20
 	addiction_chance = 50
@@ -503,7 +503,7 @@
 	name = "Oculine"
 	id = "oculine"
 	description = "Oculine is a saline eye medication with mydriatic and antibiotic effects."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 
 /datum/reagent/medicine/oculine/on_mob_life(mob/living/M)
@@ -529,7 +529,7 @@
 	name = "Atropine"
 	id = "atropine"
 	description = "Atropine is a potent cardiac resuscitant but it can causes confusion, dizzyness and hyperthermia."
-	reagent_state = LIQUID
+
 	color = "#000000"
 	metabolization_rate = 0.2
 	overdose_threshold = 25
@@ -555,7 +555,7 @@
 	name = "Epinephrine"
 	id = "epinephrine"
 	description = "Epinephrine is a potent neurotransmitter, used in medical emergencies to halt anaphylactic shock and prevent cardiac arrest."
-	reagent_state = LIQUID
+
 	color = "#96B1AE"
 	metabolization_rate = 0.2
 	overdose_threshold = 20
@@ -607,7 +607,7 @@
 	name = "Strange Reagent"
 	id = "strange_reagent"
 	description = "A glowing green fluid highly reminiscent of nuclear waste."
-	reagent_state = LIQUID
+
 	color = "#A0E85E"
 	metabolization_rate = 0.2
 
@@ -789,7 +789,7 @@
 	name = "Insulin"
 	id = "insulin"
 	description = "A hormone generated by the pancreas responsible for metabolizing carbohydrates and fat in the bloodstream."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 
 /datum/reagent/medicine/insulin/on_mob_life(mob/living/M)
@@ -806,7 +806,7 @@
 	name = "Teporone"
 	id = "teporone"
 	description = "This experimental plasma-based compound seems to regulate body temperature."
-	reagent_state = LIQUID
+
 	color = "#D782E6"
 	addiction_chance = 20
 	overdose_threshold = 50
@@ -822,7 +822,7 @@
 	name = "Haloperidol"
 	id = "haloperidol"
 	description = "Haloperidol is a powerful antipsychotic and sedative. Will help control psychiatric problems, but may cause brain damage."
-	reagent_state = LIQUID
+
 	color = "#FFDCFF"
 
 /datum/reagent/medicine/haloperidol/on_mob_life(mob/living/M)
@@ -851,7 +851,7 @@
 	name = "Ether"
 	id = "ether"
 	description = "A strong anesthetic and sedative."
-	reagent_state = LIQUID
+
 	color = "#96DEDE"
 
 /datum/reagent/medicine/ether/on_mob_life(mob/living/M)
@@ -871,7 +871,7 @@
 	name = "Restorative Nanites"
 	id = "syndicate_nanites"
 	description = "Miniature medical robots that swiftly restore bodily damage. May begin to attack their host's cells in high amounts."
-	reagent_state = SOLID
+
 	color = "#555555"
 	can_synth = FALSE
 
@@ -888,7 +888,7 @@
 	name = "Diluted Omnizine"
 	id = "weak_omnizine"
 	description = "Slowly heals all damage types. A far weaker substitute than actual omnizine."
-	reagent_state = LIQUID
+
 	color = "#DCDCDC"
 	overdose_threshold = 30
 	metabolization_rate = 0.1
@@ -934,7 +934,7 @@
 	name = "Degreaser"
 	id = "degreaser"
 	description = "An industrial degreaser which can be used to clean residual build-up from machinery and surfaces."
-	reagent_state = LIQUID
+
 	color = "#CC7A00"
 	process_flags = SYNTHETIC
 
@@ -963,7 +963,7 @@
 	name = "Liquid Solder"
 	id = "liquid_solder"
 	description = "A solution formulated to clean and repair damaged connections in posibrains while in use."
-	reagent_state = LIQUID
+
 	color = "#D7B395"
 	process_flags = SYNTHETIC
 
@@ -978,7 +978,7 @@
 	name = "Bicaridine"
 	id = "bicaridine"
 	description = "Restores bruising. Overdose causes it instead."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	overdose_threshold = 30
 
@@ -993,7 +993,7 @@
 	name = "Kelotane"
 	id = "kelotane"
 	description = "Restores fire damage. Overdose causes it instead."
-	reagent_state = LIQUID
+
 	color = "#C8A5DC"
 	overdose_threshold = 30
 
