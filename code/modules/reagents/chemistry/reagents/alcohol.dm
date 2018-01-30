@@ -3,6 +3,7 @@
 	name = "Ethanol" //Parent class for all alcoholic reagents.
 	id = "ethanol"
 	description = "A well-known alcohol with a variety of applications."
+	reagent_flags = REAGENT_DRINK
 	nutriment_factor = 0 //So alcohol can fill you up! If they want to.
 	color = "#404030" // rgb: 64, 64, 48
 	var/dizzy_adj = 3

@@ -34,8 +34,8 @@
 			if(isrobot(user)) //Cyborg modules that include drinks automatically refill themselves, but drain the borg's cell
 				var/mob/living/silicon/robot/borg = user
 				borg.cell.use(30)
-				var/refill = reagents.get_master_reagent_id()
-				if(refill in drinks) // Only synthesize drinks
+				var/datum/reagent/refill = reagents.get_master_reagent()
+				if(refill.reagent_flags & REAGENT_DRINK) // Only synthesize drinks
 					spawn(600)
 						reagents.add_reagent(refill, bitesize)
 			return 1
@@ -89,14 +89,14 @@
 		var/datum/reagent/refill
 		var/datum/reagent/refillName
 		if(isrobot(user))
-			refill = reagents.get_master_reagent_id()
+			refill = reagents.get_master_reagent()
 			refillName = reagents.get_master_reagent_name()
 
 		var/trans = reagents.trans_to(target, amount_per_transfer_from_this)
 		to_chat(user, "<span class='notice'> You transfer [trans] units of the solution to [target].</span>")
 
 		if(isrobot(user)) //Cyborg modules that include drinks automatically refill themselves, but drain the borg's cell
-			if(refill in drinks) // Only synthesize drinks
+			if(refill.reagent_flags & REAGENT_DRINK) // Only synthesize drinks
 				var/mob/living/silicon/robot/bro = user
 				var/chargeAmount = max(30,4*trans)
 				bro.cell.use(chargeAmount)
