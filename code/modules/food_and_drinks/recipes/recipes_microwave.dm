@@ -396,6 +396,14 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/spesslaw
 
+/datum/recipe/microwave/macncheese
+	reagents = list("water" = 5)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/macaroni,
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/macncheese
+
 /datum/recipe/microwave/superbiteburger
 	reagents = list("sodiumchloride" = 5, "blackpepper" = 5)
 	items = list(

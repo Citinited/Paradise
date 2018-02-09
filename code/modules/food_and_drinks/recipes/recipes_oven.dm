@@ -264,6 +264,15 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/hawaiianpizza
 
+/datum/recipe/oven/macncheesepizza
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/macncheese,
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/macpizza
+
 /datum/recipe/oven/amanita_pie
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
