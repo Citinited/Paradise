@@ -1469,6 +1469,7 @@
 #include "code\modules\hydroponics\grown\towercap.dm"
 #include "code\modules\karma\karma.dm"
 #include "code\modules\library\admin.dm"
+#include "code\modules\library\ereader.dm"
 #include "code\modules\library\lib_items.dm"
 #include "code\modules\library\lib_machines.dm"
 #include "code\modules\library\lib_readme.dm"

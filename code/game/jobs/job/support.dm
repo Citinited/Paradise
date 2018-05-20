@@ -356,6 +356,7 @@
 	l_pocket = /obj/item/laser_pointer
 	r_pocket = /obj/item/barcodescanner
 	l_hand = /obj/item/storage/bag/books
+	r_hand = /obj/item/ereader
 	pda = /obj/item/pda/librarian
 
 /datum/job/barber

@@ -1,0 +1,17 @@
+<!--
+	Used in: \code\modules\library\ereader.dm
+-->
+
+<h3>nanotrasen kindle</h3>
+<div>
+	{{:helper.link("my book", "bookmark-o", {"reader_mode": 1}, data.reader_mode == 1 ? "linkOn" : null)}} {{:helper.link("my library", "book", {"reader_mode": 2}, data.reader_mode == 2 ? "linkOn" : null)}}
+</div>
+{{if data.reader_mode == 1}}
+	<p>now reading: <strong>{{:data.book_title}}</strong> by <strong>{{:data.book_author}}</strong></p>
+	<p>{{:data.book_data}}</p>
+{{else data.reader_mode == 2}}
+	{{for data.book_list}}
+		<div>hello!</div>
+		<div>{{:value.title}} by {{:value.author}} ({{:helper.link("Checkout", "check", {"checkout": 1}, data.checkout == 1 ? "linkOn" : null)}})</div>
+	{{/for}}
+{{/if}}
