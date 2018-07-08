@@ -13,17 +13,17 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 	icon_state = "conveyor_stopped_cw"
 	name = "conveyor belt"
 	desc = "A conveyor belt."
-	layer = 2			// so they appear under stuff
+	layer = TURF_LAYER 		// so they appear under stuff
 	anchored = TRUE
-	var/operating = FALSE
+	var/operating = FALSE	//NB: this can be TRUE while the belt doesn't go
 	var/forwards			// The direction the conveyor sends you in
 	var/backwards			// hopefully self-explanatory
 	var/clockwise = TRUE	// For corner pieces - do we go clockwise or counterclockwise?
-	var/operable = TRUE			// Can this belt actually go?
+	var/operable = TRUE		// Can this belt actually go?
 	var/list/affecting		// the list of all items that will be moved this ptick
 	var/reversed = FALSE	// set to TRUE to have the conveyor belt be reversed
 	speed_process = TRUE	//gotta go fast
-	var/id				//ID of the connected lever
+	var/id					//ID of the connected lever
 
 	// create a conveyor
 /obj/machinery/conveyor/New(loc, new_dir, new_id)
@@ -48,8 +48,8 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 	update_move_direction()
 
 // attack with item, place item on conveyor
-/obj/machinery/conveyor/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/crowbar))
+/obj/machinery/conveyor/attackby(obj/item/I, mob/user)
+	if(iscrowbar(I))
 		if(!(stat & BROKEN))
 			var/obj/item/conveyor_construct/C = new(loc)
 			C.id = id
@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 		qdel(src)
 	else if(stat & BROKEN)
 		return ..()
-	else if(istype(I, /obj/item/wrench))
+	else if(iswrench(I))
 		set_rotation(user)
 		update_move_direction()
 		playsound(loc, I.usesound, 50, 1)
@@ -86,19 +86,38 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 	else
 		icon_state = "conveyor_stopped_[clockwise ? "cw" : "ccw"]"
 
-/obj/machinery/conveyor/proc/update_move_direction() //NB: Direction refers to the space an item will end up in if it moves onto a space e.g. NORTHEAST = transfer an item to the northeast. clockwise affects the icon and refers to the way the belt appears to travel.
+/obj/machinery/conveyor/proc/update_move_direction()
 	update_icon()
-	if(dir in cardinal)
-		forwards = reversed ? turn(dir, 180) : dir
-		backwards = reversed ? dir : turn(dir, 180)
-	else
-		forwards = turn(dir, clockwise ? -45 : 45)
-		backwards = turn(forwards, clockwise ? -90 : 90)
-		if(!reversed)
-			return
-		var/temporary_direction = forwards
-		forwards = backwards
-		backwards = temporary_direction
+	switch(dir)
+		if(NORTH)
+			forwards = NORTH
+			backwards = SOUTH
+		if(EAST)
+			forwards = EAST
+			backwards = WEST
+		if(SOUTH)
+			forwards = SOUTH
+			backwards = NORTH
+		if(WEST)
+			forwards = WEST
+			backwards = EAST
+		if(NORTHEAST)
+			forwards = clockwise ? EAST : NORTH
+			backwards = clockwise ? SOUTH : WEST
+		if(SOUTHEAST)
+			forwards = clockwise ? SOUTH : EAST
+			backwards = clockwise ? WEST : NORTH
+		if(SOUTHWEST)
+			forwards = clockwise ? WEST : SOUTH
+			backwards = clockwise ? NORTH : EAST
+		if(NORTHWEST)
+			forwards = clockwise ? NORTH : WEST
+			backwards = clockwise ? EAST : SOUTH
+	if(!reversed)
+		return
+	var/temporary_direction = forwards
+	forwards = backwards
+	backwards = temporary_direction
 
 /obj/machinery/conveyor/proc/set_rotation(mob/user)
 	dir = turn(reversed ? backwards : forwards, -90) //Fuck it, let's do it this way instead of doing something clever with dir
@@ -134,7 +153,6 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 
 /obj/machinery/conveyor/power_change()
 	..()
-	process()
 	update_icon()
 
 /obj/machinery/conveyor/process()
@@ -174,9 +192,7 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 	if(C)
 		C.set_operable(FALSE, id, FALSE)
 
-//set the operable var if conveyor ID matches, propagating in the given direction
-
-/obj/machinery/conveyor/proc/set_operable(propagate_forwards, match_id, op)
+/obj/machinery/conveyor/proc/set_operable(propagate_forwards, match_id, op) //Sets a conveyor inoperable if ID matches it, and propagates forwards / backwards
 	if(id != match_id)
 		return
 	operable = op
@@ -196,7 +212,6 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 	var/reversed = TRUE
 	var/one_way = FALSE	// Do we go in one direction?
 	anchored = TRUE
-	speed_process = TRUE
 	var/id
 	var/list/conveyors = list()
 
@@ -243,22 +258,20 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 		toggle(user)
 
 /obj/machinery/conveyor_switch/proc/toggle(mob/user)
+	add_fingerprint(user)
 	if(!allowed(user) && !user.can_advanced_admin_interact()) //this is in Para but not TG. I don't think there's any which are set anyway.
 		to_chat(user, "<span class='warning'>Access denied.</span>")
 		return
-	add_fingerprint(user)
 	if(position)
 		position = DIRECTION_OFF
 	else
 		reversed = one_way ? FALSE : !reversed
 		position = reversed ? DIRECTION_REVERSED : DIRECTION_FORWARDS
 	update_icon()
-	var/make_go = position ? TRUE : FALSE //Do the check here so we don't need to do it a bunch of times later
-	var/make_go_reverse = reversed ? TRUE : FALSE
 	for(var/obj/machinery/conveyor/C in conveyors)
-		C.operating = make_go
-		if(C.reversed != make_go_reverse)
-			C.reversed = make_go_reverse
+		C.operating = abs(position)
+		if(C.reversed != reversed)
+			C.reversed = reversed
 			C.update_move_direction()
 		else
 			C.update_icon()
@@ -273,13 +286,13 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 		S.update_icon()
 		CHECK_TICK
 
-/obj/machinery/conveyor_switch/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/crowbar))
+/obj/machinery/conveyor_switch/attackby(obj/item/I, mob/user)
+	if(iscrowbar(I))
 		var/obj/item/conveyor_switch_construct/C = new(loc, id)
 		transfer_fingerprints_to(C)
 		to_chat(user,"<span class='notice'>You detach the conveyor switch.</span>")
 		qdel(src)
-	else if(istype(I, /obj/item/multitool))
+	else if(ismultitool(I))
 		update_multitool_menu(user)
 	else
 		return ..()
@@ -328,7 +341,7 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 	if(T == get_turf(user))
 		to_chat(user, "<span class='notice'>You cannot place a conveyor belt under yourself.</span>")
 		return
-	if(locate(/obj/machinery/conveyor) in T)
+	if(locate(/obj/machinery/conveyor) in T) //Can't put conveyors beneath conveyors
 		to_chat(user, "<span class='notice'>There's already a conveyor there!</span>")
 		return
 	var/obj/machinery/conveyor/C = new(T, user.dir, id)
