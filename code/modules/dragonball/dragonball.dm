@@ -24,28 +24,31 @@ GLOBAL_LIST_INIT(dragonballs, list())
 		return
 	var/list/the_balls = list()
 	for(var/path in subtypesof(/obj/item/dragonball))
-		to_chat(user, "trying to find [path]")
-		if(path == src || locate(path) in range(1, get_turf(src)))
+		if(path == type || locate(path) in range(1, get_turf(src)))
 			var/obj/item/dragonball/D = path
-			to_chat(user, "found")
 			the_balls.Add(D)
 			continue
 		to_chat(user, "<span class='warning'>[src] does nothing, despite your best wishes.</span")
 		return
-	to_chat(user, "ALL BALLS HERE!")
 	for(var/obj/item/dragonball/DB in the_balls)
+		to_chat(user, "[DB] and [DB.type]")
 		DB.dragonball_in_use = TRUE
 	var/big_bad_dragon = summon_shenron(get_turf(src), user)
 	for(var/obj/item/dragonball/DB in the_balls)
 		big_bad_dragon ? DB.make_inert() : DB.dragonball_in_use == FALSE
 	qdel(the_balls)
 
+/obj/item/dragonball/update_icon()
+	icon_state = inert ? "dragonball_inert" : initial(icon_state)
+
 /obj/item/dragonball/proc/make_inert()
 	desc = "It's just an inert stone ball now."
 	inert = TRUE
 	GLOB.dragonballs.Remove(src)
+	update_icon()
 
-/obj/item/dragonball/proc/summon_shenron(turf/T, mob/user)
+/obj/item/dragonball/proc/summon_shenron(turf/T, mob/living/carbon/human/user)
+	var/turf/user_turf = get_turf(user)
 	var/obj/effect/shenron/S = new /obj/effect/shenron(T)
 	S.atom_say("<strong>I AM [uppertext(S.name)].</strong>")
 	S.atom_say("<strong>YOU ARE DISTURBING ME FROM MY SLUMBER. WHAT IS YOUR WISH?</strong>")
@@ -54,16 +57,29 @@ GLOBAL_LIST_INIT(dragonballs, list())
 	switch(I)
 		if("Booze")
 			message = "YOU WISH TO BE INTOXICATED? VERY WELL!"
+			for(var/path in subtypesof(/obj/item/reagent_containers/food/drinks/bottle))
+				var/obj/item/reagent_containers/food/drinks/bottle/B = new(user_turf)
+				B.pixel_x = rand(-16, 16)
+				B.pixel_y = rand(-16, 16)
 		if("Magic")
 			message = "THE LURE OF THE ARCANE, AN UNDERSTANDABLE WISH.THIS POWER SHALL BE YOURS."
+			var/list/spells = shuffle(subtypesof(/obj/item/spellbook/oneuse))
+			for(var/i in 1 to 3)
+				var/path = pick_n_take(spells)
+				var/obj/item/spellbook/oneuse/B = new path(user_turf)
+				user.equip_or_collect(B, slot_l_hand)
 		if("Money")
 			message = "A POPULAR REQUEST, AND ONE I CAN EASILY GRANT YOU."
+			var/obj/item/stack/spacecash/c1000000/C = new(user_turf)
+			user.equip_or_collect(C, slot_l_hand)
 		if("More wishes")
 			message = "WISHING FOR MORE WISHES IS SOMETHING I CANNOT GRANT. GOOD DAY."
 		if("Power")
 			message = "EVERYONE WISHES FOR MORE POWER. I HOPE YOU WIELD IT WELL."
 		if("Sex")
 			message = "A CARNAL DESIRE, BUT ONE I SHALL GRANT FOR YOU."
+			new /mob/living/simple_animal/hostile/alien/maid(user_turf)
+			new /mob/living/simple_animal/hostile/alien/maid(user_turf)
 		if(null)
 			message = "YOU WISHED FOR NOTHING. A PLEASANT DAY TO YOU."
 		else
@@ -75,31 +91,31 @@ GLOBAL_LIST_INIT(dragonballs, list())
 
 
 /obj/item/dragonball/one
-	name = "first dragon ball"
+	name = "one-star dragon ball"
 	icon_state = "dragonball_1"
 
 /obj/item/dragonball/two
-	name = "second dragon ball"
+	name = "two-star dragon ball"
 	icon_state = "dragonball_2"
 
 /obj/item/dragonball/three
-	name = "third dragon ball"
+	name = "three-star dragon ball"
 	icon_state = "dragonball_3"
 
 /obj/item/dragonball/four
-	name = "fourth dragon ball"
+	name = "four-star dragon ball"
 	icon_state = "dragonball_4"
 
 /obj/item/dragonball/five
-	name = "fifth dragon ball"
+	name = "five-star dragon ball"
 	icon_state = "dragonball_5"
 
 /obj/item/dragonball/six
-	name = "sixth dragon ball"
+	name = "six-star dragon ball"
 	icon_state = "dragonball_6"
 
 /obj/item/dragonball/seven
-	name = "seventh dragon ball"
+	name = "seven-star dragon ball"
 	icon_state = "dragonball_7"
 
 
@@ -140,7 +156,7 @@ GLOBAL_LIST_INIT(dragonballs, list())
 		to_chat(user, "<span class='warning'>Calibrate [src] first!</span>")
 		return
 	if(last_used + cooldown_duration > world.time)
-		to_chat(user, "<span class='warning'>[src] doesn't respond.</span>")
+		to_chat(user, "<span class='warning'>[src] needs time to recharge.</span>")
 		return
 	last_used = world.time
 	var/turf/our_turf = get_turf(src)
@@ -151,7 +167,7 @@ GLOBAL_LIST_INIT(dragonballs, list())
 	atom_say("Target: [tracking], located [dir2text(get_dir(our_turf, target_turf))], around [get_dist(our_turf, target_turf)] metres away.")
 
 /obj/item/dragon_radar/proc/track(mob/user)
-	if(!GLOB.dragonballs)
+	if(!GLOB.dragonballs.len)
 		to_chat(user, "<span class='warning'>[src] doesn't respond.</span>")
 		return
 	var/I = input(user, "Which dragon ball would you like to track?", "Select a target!") as null|anything in GLOB.dragonballs
