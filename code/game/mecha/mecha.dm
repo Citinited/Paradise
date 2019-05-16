@@ -1510,7 +1510,7 @@
 	diag_hud_set_mechtracking()
 
 
-/obj/mecha/speech_bubble(var/bubble_state = "",var/bubble_loc = src, var/list/bubble_recipients = list())
+/obj/mecha/speech_bubble(bubble_state = "", bubble_loc = src, list/bubble_recipients = list())
 	flick_overlay(image('icons/mob/talk.dmi', bubble_loc, bubble_state,MOB_LAYER+1), bubble_recipients, 30)
 
 /obj/mecha/update_remote_sight(mob/living/user)

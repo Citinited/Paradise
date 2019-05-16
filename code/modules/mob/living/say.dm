@@ -255,9 +255,9 @@ proc/get_radio_key_from_channel(var/channel)
 	spawn(0)
 		if(loc && !isturf(loc))
 			var/atom/A = loc //Non-turf, let it handle the speech bubble
-			A.speech_bubble("hR[speech_bubble_test]", A, speech_bubble_recipients)
+			A.speech_bubble("hR[speech_bubble_test]", A, speech_bubble_recipients, message)
 		else //Turf, leave speech bubbles to the mob
-			speech_bubble("h[speech_bubble_test]", src, speech_bubble_recipients)
+			speech_bubble("h[speech_bubble_test]", src, speech_bubble_recipients, message)
 
 	for(var/obj/O in listening_obj)
 		spawn(0)
@@ -450,7 +450,11 @@ proc/get_radio_key_from_channel(var/channel)
 
 	return 1
 
-/mob/living/speech_bubble(var/bubble_state = "",var/bubble_loc = src, var/list/bubble_recipients = list())
-	var/image/I = image('icons/mob/talk.dmi', bubble_loc, bubble_state, MOB_LAYER + 1)
-	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
+/mob/living/speech_bubble(bubble_state = "",bubble_loc = src, list/bubble_recipients = list(), message)
+	var/image/I
+	if(length(message) > 32)
+		I = image('icons/mob/talk.dmi', bubble_loc, bubble_state, MOB_LAYER + 1)
+		I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
+	else
+
 	flick_overlay(I, bubble_recipients, 30)

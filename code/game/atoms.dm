@@ -655,7 +655,7 @@ var/list/blood_splatter_icons = list()
 			if(V.type == type)
 				V.reagents.add_reagent(vomit_reagent, 5)
 				return
-			
+
 		var/obj/effect/decal/cleanable/vomit/this = new type(src)
 
 		// Make toxins vomit look different
@@ -724,7 +724,7 @@ var/list/blood_splatter_icons = list()
 		return
 	audible_message("<span class='game say'><span class='name'>[src]</span> [atom_say_verb], \"[message]\"</span>")
 
-/atom/proc/speech_bubble(var/bubble_state = "",var/bubble_loc = src, var/list/bubble_recipients = list())
+/atom/proc/speech_bubble(bubble_state = "",bubble_loc = src, list/bubble_recipients = list(), message)
 	return
 
 /atom/vv_edit_var(var_name, var_value)
